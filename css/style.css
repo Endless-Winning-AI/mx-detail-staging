@@ -678,9 +678,12 @@ p { margin-bottom: 1rem; }
   padding: 32px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-gray-medium);
-  min-width: calc(33.333% - 16px);
+  width: calc((100% - 48px) / 3);
+  min-width: calc((100% - 48px) / 3);
   flex-shrink: 0;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 .review-card:hover {
   box-shadow: var(--shadow-md);
@@ -709,6 +712,7 @@ p { margin-bottom: 1rem; }
 .review-meta {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 .review-author {
   font-weight: 700;
@@ -723,7 +727,7 @@ p { margin-bottom: 1rem; }
 .review-stars {
   color: var(--color-star);
   font-size: 1.1rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   letter-spacing: 2px;
 }
 .review-text {
@@ -732,6 +736,8 @@ p { margin-bottom: 1rem; }
   margin-bottom: 0;
   line-height: 1.8;
   font-size: 0.95rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Carousel Controls */
@@ -1687,7 +1693,7 @@ a, button, .btn, .pkg-header, .nav-toggle {
     direction: ltr;
   }
   .reviews-grid { grid-template-columns: 1fr; }
-  .review-card { min-width: calc(50% - 12px); }
+  .review-card { width: calc((100% - 24px) / 2); min-width: calc((100% - 24px) / 2); }
   .google-rating-header { gap: 20px; }
   .pricing-grid,
   .pricing-grid-4 { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
@@ -1737,7 +1743,7 @@ a, button, .btn, .pkg-header, .nav-toggle {
   .banner-cta h2 { font-size: 1.4rem; }
 
   /* Reviews */
-  .review-card { padding: 24px 20px; }
+  .review-card { padding: 24px 20px; width: calc((100% - 24px) / 2); min-width: calc((100% - 24px) / 2); }
 
   /* Testimonial */
   .testimonial-quote { font-size: 1.1rem; }
@@ -1746,6 +1752,11 @@ a, button, .btn, .pkg-header, .nav-toggle {
   .location-card { padding: 24px 20px; }
   .map-embed { height: 200px; }
 
+}
+
+/* Small tablet / large phone — single card carousel */
+@media (max-width: 640px) {
+  .review-card { width: 100%; min-width: 100%; padding: 24px 20px; }
 }
 
 /* Mobile */
@@ -1875,7 +1886,7 @@ a, button, .btn, .pkg-header, .nav-toggle {
   .testimonial-quote::before { font-size: 3rem; top: -10px; }
 
   /* Review cards */
-  .review-card { padding: 20px 16px; min-width: calc(100% - 0px); }
+  .review-card { padding: 20px 16px; width: 100%; min-width: 100%; }
   .review-text { font-size: 0.9rem; }
   .google-rating-header { flex-direction: column; gap: 16px; text-align: center; }
   .google-rating-badge { flex-direction: column; text-align: center; }
