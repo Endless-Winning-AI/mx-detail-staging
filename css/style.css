@@ -476,7 +476,8 @@ p { margin-bottom: 1rem; }
 
 /* Hero Google Rating Badge */
 .hero-google-badge {
-  margin-top: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 .hero-google-badge-inner {
   display: inline-flex;
@@ -773,6 +774,7 @@ p { margin-bottom: 1rem; }
 .reviews-dot {
   width: 10px;
   height: 10px;
+  min-height: 10px;
   border-radius: 50%;
   background: var(--color-gray-medium);
   border: none;
