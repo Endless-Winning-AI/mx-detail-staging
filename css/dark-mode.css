@@ -373,6 +373,10 @@ p {
   position: relative;
   overflow: hidden;
 }
+.review-card:hover {
+  border-color: rgba(0,124,186,0.3) !important;
+  box-shadow: 0 4px 20px rgba(0,124,186,0.1) !important;
+}
 .review-card::before {
   content: '';
   position: absolute;
@@ -388,6 +392,45 @@ p {
 }
 .review-author {
   color: var(--dm-text) !important;
+}
+.review-date {
+  color: var(--dm-text-muted) !important;
+}
+.review-avatar {
+  background: rgba(0,124,186,0.25) !important;
+  color: var(--color-primary-light) !important;
+  border: 1px solid rgba(0,124,186,0.3);
+}
+.google-rating-number {
+  color: #ffffff !important;
+}
+.google-rating-count {
+  color: var(--dm-text-muted) !important;
+}
+.google-review-link {
+  border-color: rgba(0,160,230,0.35) !important;
+  color: var(--color-primary-light) !important;
+}
+.google-review-link:hover {
+  background: rgba(0,124,186,0.15) !important;
+  border-color: rgba(0,160,230,0.6) !important;
+  color: #ffffff !important;
+}
+.reviews-arrow {
+  background: var(--dm-surface-card) !important;
+  border-color: var(--dm-border) !important;
+  color: var(--dm-text-secondary) !important;
+}
+.reviews-arrow:hover {
+  border-color: rgba(0,160,230,0.4) !important;
+  color: var(--color-primary-light) !important;
+  background: rgba(0,124,186,0.08) !important;
+}
+.reviews-dot {
+  background: rgba(255,255,255,0.15) !important;
+}
+.reviews-dot.active {
+  background: var(--color-primary) !important;
 }
 
 /* ── Parallax CTA ── */
