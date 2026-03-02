@@ -474,6 +474,58 @@ p { margin-bottom: 1rem; }
   margin-top: 8px;
 }
 
+/* Hero Google Rating Badge */
+.hero-google-badge {
+  margin-top: 28px;
+}
+.hero-google-badge-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 100px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: var(--transition);
+}
+.hero-google-badge-inner:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.35);
+  transform: translateY(-2px);
+}
+.hero-google-rating {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.hero-google-stars {
+  color: var(--color-star);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.hero-google-divider {
+  opacity: 0.4;
+  font-weight: 300;
+}
+.hero-google-count {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+.hero-google-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  margin-left: 4px;
+}
+
 /* Inner page hero (shorter) */
 .hero-inner {
   min-height: 50vh;
@@ -1748,6 +1800,17 @@ a, button, .btn, .pkg-header, .nav-toggle {
     align-items: stretch;
   }
   .btn { width: 100%; text-align: center; }
+
+  /* Hero Google badge — compact on mobile */
+  .hero-google-badge-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 16px;
+    gap: 6px;
+    font-size: 0.85rem;
+  }
+  .hero-google-divider { display: none; }
+  .hero-google-cta { width: 100%; justify-content: center; margin-left: 0; margin-top: 2px; }
 
   /* Benefits grid */
   .benefits-grid { grid-template-columns: 1fr; }
